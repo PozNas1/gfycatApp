@@ -23,7 +23,9 @@
             :key="n"
             cols="4"
           >
-            <v-card height="200">Hello eorld!</v-card>
+            <v-card height="200">
+              <img src="https://media0.giphy.com/media/8Bc6szqbEzmQi324HX/giphy.gif" alt="Can't load">
+            </v-card>
           </v-col>
         </v-row>
       </v-container>
