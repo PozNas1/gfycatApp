@@ -24,9 +24,7 @@
             cols="4"
           >
             <v-card height="250" width="370">
-
-              <img height="250" width="370" :src="link.gfycats[0].gif100px" alt="Can't load" >
-
+              <img :src="link.gfycats[0].gif100px" alt="Can't load" height="250" width="370"  >
             </v-card>
           </v-col>
         </v-row>

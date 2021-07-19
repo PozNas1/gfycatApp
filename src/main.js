@@ -5,7 +5,7 @@ import axios from 'axios'
 
 Vue.config.productionTip = false;
 
-axios.get('https://api.gfycat.com/v1/reactions/populated', { tagName: "trending", gfyCount: 15 })
+axios.get('https://api.gfycat.com/v1/reactions/populated', { tagName: "trending" })
     .then(data => {
         new Vue({
             vuetify,
