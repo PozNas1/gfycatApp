@@ -6,7 +6,7 @@
     >
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>Gifs</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -19,12 +19,14 @@
       <v-container>
         <v-row>
           <v-col
-            v-for="n in 24"
-            :key="n"
+            v-for="link in links"
+            :key="link.tagText"
             cols="4"
           >
-            <v-card height="200">
-              <img src="https://media0.giphy.com/media/8Bc6szqbEzmQi324HX/giphy.gif" alt="Can't load">
+            <v-card height="250" width="370">
+
+              <img height="250" width="370" :src="link.gfycats[0].gif100px" alt="Can't load" >
+
             </v-card>
           </v-col>
         </v-row>
@@ -34,7 +36,7 @@
 </template>
 
 <script>
+//import Vue from 'vue'
   export default {
-    //
   }
 </script>
