@@ -7,14 +7,9 @@
 <script lang="ts">
 import axios from 'axios';
 import { Component, Vue } from 'vue-property-decorator';
+import { GifObj, GifData } from '../model/interfaces';
 import Gifs from '../components/Gifs.vue';
-export interface GifObj {
-  link: string;
-  id: string;
-}
-export interface GifData {
-  tags: GifObj[];
-}
+
 @Component({
   name: 'Home',
   components: {
@@ -37,26 +32,13 @@ export default class Home extends Vue {
         if (this.isGifData(data.data)) {
           this.gifInfo = data.data.tags.map((tag: any):GifObj => {
             return {link: tag.gfycats[0].gif100px, 
-                        id: tag.tagText}
+                        id: tag.gfycats[0].tags}
           });
-          console.log(this.gifInfo)
         } else {
           throw console.error('Type of data is not valid');
         }
-        
       })
       .catch(err => console.log(err));
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: -10px;
-}
-</style>

@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import {GifObj} from '../views/Home.vue';
+import { GifObj } from '../model/interfaces';
 
 @Component({
   name: 'Gifs'
