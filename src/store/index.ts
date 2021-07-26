@@ -5,8 +5,6 @@ import { GifObj, GifData } from '../model/interfaces';
 
 Vue.use(Vuex)
 
-//let gifInfo: GifObj[] = [];
-
 function isGifData(obj: unknown): obj is GifData {
   return typeof obj === "object" 
     && obj != null
